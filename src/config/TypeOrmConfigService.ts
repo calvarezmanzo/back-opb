@@ -5,7 +5,7 @@ import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from "@nestjs/typeorm";
 export class TypeOrmConfigService implements TypeOrmOptionsFactory {
   createTypeOrmOptions(): TypeOrmModuleOptions {
     return {
-      type: 'mysql',
+      type: 'mssql',
       host: process.env.DB_HOST,
       port: +process.env.DB_PORT,
       username: process.env.DB_USERNAME,
@@ -14,6 +14,9 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
       entities: [],
       autoLoadEntities: true, //true: no hay que importar TypeOrmModule.forFeature([<Entity>]) en cada módulo
       synchronize: false,
+      options : {
+        trustServerCertificate: true,
+      }
     };
   }
 }
