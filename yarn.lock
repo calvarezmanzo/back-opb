@@ -1744,9 +1744,10 @@ babel-preset-jest@^29.6.3:
     "@nestjs/platform-express" "^10.0.0"
     "@nestjs/swagger" "^7.4.0"
     "@nestjs/typeorm" "^10.0.2"
-    backend "file:../../../../../AppData/Local/Yarn/Cache/v6/npm-backend-0.0.1-25860499-188b-4a1c-be90-41bc55b1af74-1727440675096/node_modules/backend"
+    backend "file:../../../../../AppData/Local/Yarn/Cache/v6/npm-backend-0.0.1-0416a4bd-e517-4c3e-9121-79e05ac628b7-1728147688886/node_modules/backend"
     class-validator "^0.14.1"
     dotenv "^16.4.5"
+    mssql "^11.0.1"
     mysql2 "^3.11.0"
     reflect-metadata "^0.2.0"
     rxjs "^7.8.1"
@@ -4505,11 +4506,6 @@ prettier-linter-helpers@^1.0.0:
   integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
   dependencies:
     fast-diff "^1.1.2"
-
-prettier@^3.0.0:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.3.3.tgz#30c54fe0be0d8d12e6ae61dbb10109ea00d53105"
-  integrity sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==
 
 pretty-format@^29.0.0, pretty-format@^29.7.0:
   version "29.7.0"

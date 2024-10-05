@@ -14,11 +14,12 @@ export class AuthService {
 
 
   async logIn(loginDto:LoginDto) {
-    return this.databaseService.callStoredProc('sp_crud_tb_usuario', [
-      'Login',
-      loginDto.email,
-      loginDto.password
-    ]);
+    const {email, password} = loginDto;
+    return this.databaseService.callStoredProc('sp_crud_tb_usuario', {
+      TipoQuery: 'Login',
+      Correo: email,
+      password: password,
+    });
   }
 
 }
