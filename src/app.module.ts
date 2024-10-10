@@ -8,6 +8,7 @@ import { UserModule } from './modules/user/user.module';
 import { ReportModule } from './modules/report/report.module';
 import { TypeOrmConfigService } from './config/TypeOrmConfigService';
 import { DatabaseModule } from './modules/database/database.module';
+import { AnalyticsModule } from './modules/analytics/analytics.module';
 
 @Module({
   imports: [
@@ -21,7 +22,8 @@ import { DatabaseModule } from './modules/database/database.module';
     AuthModule, 
     UserModule, 
     ReportModule,
-    DatabaseModule
+    DatabaseModule,
+    AnalyticsModule
       
   ],
   controllers: [AppController],
