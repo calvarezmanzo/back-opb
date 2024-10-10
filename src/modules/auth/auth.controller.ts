@@ -21,7 +21,6 @@ export class AuthController {
     @Get('getTiposUsuario')
     async getTiposUsuario() {
         const tipoUser=await this.authService.getTiposUsuario();
-        console.log(tipoUser[0][0].response)
         return tipoUser;
     }
 
