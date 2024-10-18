@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateAnalyticsDto } from './dto/create-analytics.dto';
 import { UpdateAnalyticsDto } from './dto/update-analytics.dto';
 import { DatabaseService } from '../database/database.service';
+import { SelectAnalyticsDto } from './dto/select-analytics.dto';
 
 @Injectable()
 export class AnalyticsService {
@@ -17,6 +18,14 @@ export class AnalyticsService {
   async findAll() {
     return  await this.databaseService.callStoredProc('sp_select_DataLogistic', {
     });
+  }
+
+  async findAnalyticsById(userId : SelectAnalyticsDto){
+    const {clienteId} = userId;
+    return  await this.databaseService.callStoredProc('sp_select_DataLogistic', {
+      ClienteId: clienteId
+    });
+
   }
 
   findOne(id: number) {
