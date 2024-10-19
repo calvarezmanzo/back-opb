@@ -9,6 +9,9 @@ import { ReportModule } from './modules/report/report.module';
 import { TypeOrmConfigService } from './config/TypeOrmConfigService';
 import { DatabaseModule } from './modules/database/database.module';
 import { AnalyticsModule } from './modules/analytics/analytics.module';
+import { ClientesModule } from './modules/clientes/clientes.module';
+import { ExportadoresModule } from './modules/exportadores/exportadores.module';
+import { TemporadasModule } from './modules/temporadas/temporadas.module';
 
 @Module({
   imports: [
@@ -23,7 +26,10 @@ import { AnalyticsModule } from './modules/analytics/analytics.module';
     UserModule, 
     ReportModule,
     DatabaseModule,
-    AnalyticsModule
+    AnalyticsModule,
+    ClientesModule,
+    ExportadoresModule,
+    TemporadasModule
       
   ],
   controllers: [AppController],
