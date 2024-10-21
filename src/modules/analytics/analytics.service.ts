@@ -21,9 +21,11 @@ export class AnalyticsService {
   }
 
   async findAnalyticsById(userId : SelectAnalyticsDto){
-    const {clienteId} = userId;
+    const {clienteId, seasonId, exportadoresId} = userId;
     return  await this.databaseService.callStoredProc('sp_select_DataLogistic', {
-      ClienteId: clienteId
+      ClienteId: clienteId,
+      SeasonId: seasonId,
+      ExportadoresId : exportadoresId
     });
 
   }

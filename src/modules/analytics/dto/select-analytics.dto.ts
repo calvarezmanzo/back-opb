@@ -13,5 +13,22 @@ export class SelectAnalyticsDto {
     @IsString()
     @IsOptional()
     readonly clienteId: string;
+    @ApiProperty({
+      example: '',
+      description: '',
+      nullable: false,
+    })
+    @IsString()
+    @IsOptional()
+    readonly seasonId: string;
+    @ApiProperty({
+      example: '',
+      description: '',
+      nullable: false,
+    })
+    @IsString()
+    @IsOptional()
+    readonly exportadoresId : string;
+
   
   }
