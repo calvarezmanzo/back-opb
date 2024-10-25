@@ -4,9 +4,11 @@ import { UpdateAnalyticsDto } from './dto/update-analytics.dto';
 import { DatabaseService } from '../database/database.service';
 import { SelectAnalyticsDto } from './dto/select-analytics.dto';
 import { SelectLogisticDto } from './dto/select-dashboard-datalogistic';
+import { SelectCamaraDto } from './dto/select-dashboard-camara';
 
 @Injectable()
 export class AnalyticsService {
+
 
 
   constructor(private readonly databaseService: DatabaseService,
@@ -21,6 +23,18 @@ export class AnalyticsService {
     return  await this.databaseService.callStoredProc('sp_select_DataLogistic', {
     });
   }
+
+  async findDataCamara(request: SelectCamaraDto) {
+    const { clienteId, seasonId, exportadores } = request;
+    return  await this.databaseService.callStoredProc('sp_select_DataLogistic_Camara', {
+      ClienteId: clienteId,
+      SeasonId: seasonId,
+      ExportadoresId: exportadores
+     
+    });
+
+  }
+
 
   async findDataLogistic(request: SelectLogisticDto) {
     const { clienteId, seasonId } = request;
